@@ -28,13 +28,14 @@ namespace bot.modules
 
             var bulk = await this.Context.Channel.GetMessagesAsync((int)msgnum + 1).Flatten();
             await this.Context.Channel.DeleteMessagesAsync(bulk);
-            const int delay = 4500;
-            var c = await this.ReplyAsync($"Purge of " + msgnum + " message(s) completed. _This message will auto-destruct in " + delay+500 / 1000 + " seconds._");
-            await Task.Delay(delay);
+            const int delay = 5000;
+            var c = await this.ReplyAsync($"Purge of  {msgnum}  message(s) completed. _This message will auto-destruct in {delay / 1000}  seconds._");
+            await Task.Delay(delay-500);
             var boom = await this.ReplyAsync($"_BOOM!!!_");
             await Task.Delay(500);
-            await c.DeleteAsync();
             await boom.DeleteAsync();
+            await c.DeleteAsync();
+            
 
 
         }
