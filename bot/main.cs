@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Discord.Net.Providers.WS4Net;
 
 namespace bot
 {
@@ -22,9 +23,10 @@ namespace bot
         {
             //_client = new DiscordSocketClient();
 
-            _client = new DiscordSocketClient(new DiscordSocketConfig
+            _client = new DiscordSocketClient(new DiscordSocketConfig()
             {
-                LogLevel = LogSeverity.Info
+                LogLevel = LogSeverity.Verbose,
+                WebSocketProvider = WS4NetProvider.Instance
             });
 
             _client.Log += Log;
@@ -50,6 +52,7 @@ namespace bot
             return Task.CompletedTask;
         }
 
+       
     }
        
 }
