@@ -9,8 +9,8 @@ namespace bot.modules
 {
     public class Test:ModuleBase<SocketCommandContext>
     {
-        [Command("test")]
-        public async Task kecske()
+        [Command("test",RunMode=RunMode.Async)]
+        public async Task Run()
         {
             await Context.Channel.SendMessageAsync("Test Successful!");
         }

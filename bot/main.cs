@@ -27,18 +27,12 @@ namespace bot
             await _client.LoginAsync(TokenType.Bot, token);
             
             await _client.StartAsync();
-           
+
             _handler = new CommandHandler();
 
             await _handler.InitializeAsync(_client);
- 
-                
 
-
-
-
-        await Task.Delay(-1);//ezután nem fut le semmi
-            
+            await Task.Delay(-1);
         }
 
 

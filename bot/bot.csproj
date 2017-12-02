@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="CommandHandler.cs" />
     <Compile Include="main.cs" />
+    <Compile Include="Modules\purge.cs" />
     <Compile Include="Modules\test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
