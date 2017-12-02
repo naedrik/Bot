@@ -32,7 +32,7 @@ namespace bot
 
             await _handler.InitializeAsync(_client);
 
-            await Task.Delay(-1);
+            await Task.Delay(-1);//ezután semmi nem fut le
         }
 
 
