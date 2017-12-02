@@ -24,16 +24,21 @@ namespace bot
 
             string token= "Mzg1NTU5MDIwMjIxNzU5NDkw.DQM6nA.odxmUV2q08a5df0vhgJorCp3GIQ";
 
-            await _client.LoginAsync(TokenType.Bot, token); 
-
+            await _client.LoginAsync(TokenType.Bot, token);
+            
             await _client.StartAsync();
-
-            await Task.Delay(-1);
-
+           
             _handler = new CommandHandler();
 
             await _handler.InitializeAsync(_client);
+ 
+                
 
+
+
+
+        await Task.Delay(-1);//ezután nem fut le semmi
+            
         }
 
 
