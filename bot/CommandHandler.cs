@@ -37,10 +37,10 @@ namespace bot
             {
                 var result = await _service.ExecuteAsync(context, argPos);
 
-                
-                if (!result.IsSuccess && result.Error !=CommandError.UnknownCommand)
+                bool Debug = false; 
+                if (!result.IsSuccess && Debug)
                 {
-                    //await context.Channel.SendMessageAsync(result.ErrorReason);
+                    await context.Channel.SendMessageAsync(result.ErrorReason);
                 }
             }
 

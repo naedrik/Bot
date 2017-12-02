@@ -28,12 +28,11 @@ namespace bot
 
             await _client.StartAsync();
 
-            await Task.Delay(-1);
-
             _handler = new CommandHandler();
 
             await _handler.InitializeAsync(_client);
 
+            await Task.Delay(-1);
         }
 
 
