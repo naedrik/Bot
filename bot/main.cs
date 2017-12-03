@@ -48,7 +48,7 @@ namespace bot
         {
             var guild = user.Guild;
             var channel = guild.Channels.FirstOrDefault() as SocketTextChannel;
-            Console.WriteLine("kecske");
+            //Console.WriteLine("kecske");
             await channel.SendMessageAsync($"My name is Black-Bot and I have been tasked to welcome you to our kingdom, {user.Mention}-dono!");
         }
 
