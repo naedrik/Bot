@@ -1,0 +1,4 @@
+﻿Tasks:
+	-Weather Bot( possibly node.js)
+	-Music Bot( possibly node.js)
+Ideas:
